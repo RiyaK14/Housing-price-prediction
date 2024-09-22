@@ -1,0 +1,39 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Libre+Baskerville&display=swap" rel="stylesheet">
+</head>
+<style>
+body{
+    background-image:url("{%static 'bg13.jpg'%}");
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
+    }
+    img{
+    width: 70%;
+    height:55%
+    }
+    h2{
+    font-family: 'Great Vibes', cursive;
+font-family: 'Libre Baskerville', serif;
+    }
+</style>
+<body style="text-align:center;">
+<h2>Price in accordance with area</h2>
+<img src='{%static 'my_plot.png'%}'><br>
+<br><br><h2>Price in accordance with No. of bedrooms.</h2>
+<img src='{%static 'my_plot2.png'%}'><br>
+<br><br><h2>Price difference between new and resale house.</h2>
+<img src='{%static 'my_plot3.png'%}'><br>
+<br><br><h2>Correlation between the factors.</h2>
+<img src='{%static 'my_plot4.png'%}'><br>
+
+</body>
+</html>

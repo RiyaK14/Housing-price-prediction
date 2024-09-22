@@ -1,0 +1,176 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predict</title>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width=device-width, initial scale=1">
+</head>
+<style>
+body{
+    background-image:url("{%static 'bg11.jpeg'%}");
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
+    }
+            .main{
+            position: absolute;
+            left:410px;
+            width:700px;
+            background-color:gainsboro;
+            align-items:center;
+            border-radius:5%;
+        }
+        div{
+            padding:15px;
+            text-align:center;
+            border-radius:30px;
+            font-size:20px;
+        }
+        input[type=submit]{
+            background-color:Black;
+            color:white;
+            cursor:pointer;
+            padding: 16px 32px;
+        }
+        input[type=submit]{
+            background-color:Black;
+            color:white;
+            cursor:pointer;
+            padding: 16px 32px;
+        }
+        input[type=text]{
+            cursor:pointer;
+            padding: 6px 32px;
+        }
+        h1{
+            font-size:40px;
+        }
+        h2{
+            font-size:30px;
+            color:DarkRed;
+        }
+        .drop{
+        position:absolute;
+        right:25%;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  padding: 12px 10px;
+  z-index: 1;
+        }
+        .ammen{
+        text-align:left;
+        padding-left:27%;
+        }
+        #renew{
+        right:15%;
+        }
+</style>
+<body>
+<div class="main">
+    <h1>Please enter the following values:</h1>
+    <form action="result">
+        <div class="row">
+            <div class="col-sm-4" style="background-color:powderblue;">
+                <h3>Location :</h3>
+                <input type="text" name="n1">
+            </div>
+            <div class="col-sm-4" style="background-color:Bisque;">
+                <h3>Avg. Area in sqr.fts </h3>
+                <input type="text" name="n2">
+            </div>
+            <div class="col-sm-4" style="background-color:DarkSeaGreen;">
+                <h3>Number of Bedrooms</h3>
+                <input type="text" name="n3">
+            </div>
+            <div class="col-sm-4" style="background-color:LightPink; padding-left:12%; text-align:left; ">
+
+                <h3> Do you want a new house or resale?
+                <select class="drop" id="renew" name="h1">
+                    <option value="1">New</option>
+            <option value="0">Resale</option>
+            </select></h3>
+                 </div>
+
+
+            <div class="col-sm-4" style="background-color:Turquoise;">
+                <h3>Amenities you wish:</h3>
+                <div class="ammen">
+                <h4> Gymnasium
+                <select class="drop" id="gym" name="a1">
+                    <option value="0">No</option>
+            <option value="1">Yes</option>
+            </select></h4>
+                 </div>
+                <div class="ammen">
+                <h4> Lift
+                <select class="drop" id="lift" name="a2">
+                    <option value="0">No</option>
+            <option value="1">Yes</option>
+            </select></h4>
+                 </div>
+                <div class="ammen">
+                <h4> Car Parking
+                <select class="drop" id="cp" name="a3">
+                    <option value="0">No</option>
+            <option value="1">Yes</option>
+            </select></h4>
+                 </div>
+                <div class="ammen">
+                <h4> Maintenance Staff
+                <select class="drop" id="MS" name="a4">
+                    <option value="0">No</option>
+            <option value="1">Yes</option>
+            </select></h4>
+                 </div>
+                <div  class="ammen">
+                <h4> 24x7 Security
+                <select class="drop" id="sec" name="a5">
+                    <option value="0">No</option>
+            <option value="1">Yes</option>
+            </select></h4>
+             </div>
+        <div  class="ammen">
+        <h4> Children's Play Area
+                <select class="drop" id="ChildArea" name="a6">
+                    <option value="0">No</option>
+            <option value="1">Yes</option>
+            </select></h4>
+                 </div>
+                 <div  class="ammen">
+                 <h4> Clubhouse
+                <select class="drop" id="club" name="a7">
+                    <option value="0">No</option>
+            <option value="1">Yes</option>
+            </select></h4>
+                 </div>
+                 <div class="ammen">
+                 <h4> Landscaped Gardens
+                <select class="drop" id="gardens" name="a8">
+                    <option value="0">No</option>
+            <option value="1">Yes</option>
+            </select></h4>
+                 </div>
+               <div  class="ammen">
+                 <h4> Jogging Track
+                <select class="drop" id="Jog" name="a9">
+                    <option value="0">No</option>
+            <option value="1">Yes</option>
+            </select></h4>
+</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <input type="submit" value="PREDICT">
+        </div>
+    </form>
+    <div class="row">
+        <h2>{{result2}}</h2>
+    </div>
+</div>
+</body>
+</html>

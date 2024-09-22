@@ -1,0 +1,45 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+</head>
+<style>
+body{
+    background-image:url("{%static 'bg.png'%}");
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
+    }
+        h1{
+            font-size:60px;
+            color:white;
+            font-family: monospace;
+        }
+        input[type=submit]{
+            width:15%;
+            background-color:grey;
+            color:white;
+            cursor:pointer;
+            padding: 16px 32px;
+            border:none;
+            font-size: 20px;
+            font-family: monospace;
+            margin: 0px 20px;
+        }
+</style>
+<body style="text-align:center;">
+<p >
+<h1>
+    Welcome to Gokul</h1>
+    <form action="predict" style="display: inline;">
+    <input type="submit" value="START">
+</form>
+    <form action="Graph" style="display: inline;">
+    <input type="submit" value="Get Statistics">
+</form>
+</p>
+</body>
+</html>
